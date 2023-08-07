@@ -40,6 +40,8 @@ This guide provides step-by-step instructions to deploy the "country-details-ui"
 
    Replace `<app-name>` with the desired name for your Heroku app. If you omit the `<app-name>`, Heroku will automatically generate a unique name for your app.
 
+   Note: If the project already exists, you can run this command: ``heroku config:add BUILDPACK_URL=https://github.com/fastn-stack/heroku-buildpack.git``
+
 4. Deploy to Heroku:
 
    Push the changes to the Heroku app to trigger the build and deployment process:
