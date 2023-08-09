@@ -27,8 +27,14 @@ left.px: 0
 
 -- ftd.text: Where in the world?
 style: bold
+cursor: pointer
 role: $inherited.types.heading-small
+$on-click$: $go-to-home()
 
 -- end: ftd.column
 
 -- end: header
+
+-- void go-to-home():
+
+ftd.http("/", "GET")
