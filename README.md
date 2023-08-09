@@ -1,6 +1,8 @@
 # country-details-ui
 The UI for https://github.com/fastn-community/country-details-http
 
+**Live Demo:** [https://country-details-75f6937a875a.herokuapp.com/](https://country-details-75f6937a875a.herokuapp.com/)
+
 ## Country Details UI Deployment Guide
 
 This guide provides step-by-step instructions to deploy the "country-details-ui" project, which consists of two packages, "country-details-http" (backend) and "country-details-ui" (UI). The deployment will be on Heroku using the `fastn` buildpack, which requires the `fastn` 2023 edition for building the project.
