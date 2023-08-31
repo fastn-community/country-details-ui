@@ -7,7 +7,6 @@
 -- component country-detail:
 caption string label:
 string value:
-integer int-value:
 
 -- ftd.row:
 spacing.fixed.rem: 0.25
@@ -17,16 +16,31 @@ style: semi-bold
 role: $inherited.types.label-large
 
 -- ftd.text: $country-detail.value
-if: { !is-empty(country-detail.value) }
-role: $inherited.types.label-large
-
--- ftd.integer: $country-detail.value
-if: { !is-empty(country-detail.int-value) }
 role: $inherited.types.label-large
 
 -- end: ftd.row
 
 -- end: country-detail
+
+;; ------- COUNTRY DETAIL COMPONENT
+
+-- component country-detail-int:
+caption string label:
+integer value:
+
+-- ftd.row:
+spacing.fixed.rem: 0.25
+
+-- ftd.text: $country-detail-int.label
+style: semi-bold
+role: $inherited.types.label-large
+
+-- ftd.integer: $country-detail-int.value
+role: $inherited.types.label-large
+
+-- end: ftd.row
+
+-- end: country-detail-int
 
 ;; ------- BORDER COUNTRY COMPONENT
 
@@ -102,8 +116,8 @@ spacing: space-between
 -- ftd.column:
 spacing.fixed.rem: 0.5
 
--- country-detail: Population:
-int-value: $country-details.country.population
+-- country-detail-int: Population:
+value: $country-details.country.population
 
 -- country-detail: Native Name:
 value: $country-details.country.name.nativeName.eng.common
