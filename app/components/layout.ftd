@@ -29,12 +29,9 @@ left.px: 0
 style: bold
 cursor: pointer
 role: $inherited.types.heading-small
-$on-click$: $go-to-home()
+color: #000000
+link: /
 
 -- end: ftd.column
 
 -- end: header
-
--- void go-to-home():
-
-ftd.http("/", "GET")
