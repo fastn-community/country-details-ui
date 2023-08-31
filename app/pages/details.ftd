@@ -20,13 +20,12 @@ $processor$: pr.request-data
 $processor$: pr.http
 url: $url
 
-;; ---- Get the first country from the list
-
--- country-models.country country: $utility.get-country-at-index(countries = $countries, index = 0)
-
 ;; ---- Replace the title of the page/document with the name of the country 
 
--- ftd.document: $country.name.official
+-- component doc:
+caption country-models.country country:
+
+-- ftd.document: $doc.country.name.official
 
 ;; ---- Layout for the page
 
@@ -36,8 +35,13 @@ url: $url
 
 ;; ---- This component will display the details of the requested country
 
--- cd.country-details: $country
+-- cd.country-details: $doc.country
 
 -- end: layout.main
 
 -- end: ftd.document
+
+-- end: doc
+
+-- doc: $country
+for: $country, $index in $countries

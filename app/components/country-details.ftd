@@ -7,6 +7,7 @@
 -- component country-detail:
 caption string label:
 string value:
+integer int-value:
 
 -- ftd.row:
 spacing.fixed.rem: 0.25
@@ -16,6 +17,11 @@ style: semi-bold
 role: $inherited.types.label-large
 
 -- ftd.text: $country-detail.value
+if: { !is-empty(country-detail.value) }
+role: $inherited.types.label-large
+
+-- ftd.integer: $country-detail.value
+if: { !is-empty(country-detail.int-value) }
 role: $inherited.types.label-large
 
 -- end: ftd.row
@@ -97,7 +103,7 @@ spacing: space-between
 spacing.fixed.rem: 0.5
 
 -- country-detail: Population:
-value: $utility.int-to-str(a = $country-details.country.population)
+int-value: $country-details.country.population
 
 -- country-detail: Native Name:
 value: $country-details.country.name.nativeName.eng.common
