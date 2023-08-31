@@ -44,4 +44,4 @@ caption country-models.country country:
 -- end: doc
 
 -- doc: $country
-for: $country, $index in $countries
+for: $country in $countries

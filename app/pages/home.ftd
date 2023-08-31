@@ -23,7 +23,6 @@ url: https://restcountries.com/v3.1/all
 -- ftd.column:
 width: fill-container
 height: fill-container
-align-content: center
 overflow-y: auto
 
 -- ftd.row:

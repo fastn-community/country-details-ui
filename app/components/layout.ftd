@@ -21,15 +21,12 @@ width: fill-container
 padding-vertical.rem: 1
 padding-horizontal.rem: 2
 shadow: $shadow.card-shadow
-sticky: true
-top.px: 0
-left.px: 0
 
 -- ftd.text: Where in the world?
 style: bold
 cursor: pointer
 role: $inherited.types.heading-small
-color: #000000
+color: black
 link: /
 
 -- end: ftd.column

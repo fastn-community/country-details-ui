@@ -56,7 +56,8 @@ shadow: $shadow.card-shadow
 border-radius.rem: .25
 color: #888
 cursor: pointer
-$on-click$: $utility.open-country-page(country = $border-country.country)
+link: $utility.join(a = /country/, b = $border-country.country)
+open-in-new-tab: true
 
 -- end: border-country
 
@@ -97,6 +98,7 @@ border-radius.rem: 2
 -- ftd.image:
 src: $country-details.country.flags.svg
 width.fixed.calc: calc(50% - 4rem)
+fit: contain
 
 -- ftd.column:
 width.fixed.percent: 50
